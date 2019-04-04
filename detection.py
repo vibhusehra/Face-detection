@@ -27,13 +27,13 @@ while True:
 		for ex,ey,ew,eh in eyes:
 			cv2.rectangle(roi_color, (ex,ey), (ex+ew,ey+eh), (0,255,0), 2)
 
-	cv2.imshow('img',img)
-	k = cv2.waitKey(30) & 0xff
+	cv2.imshow('img',img) #show the image
+	k = cv2.waitKey(30) & 0xff #exit if Esc is pressed
 	if k == 27:
 		break
 
-cap.release() #release everything
-cv2.destroyAllWindows()
+cap.release() #release the webcam
+cv2.destroyAllWindows() #destroy the window
 
 
 
